@@ -15,21 +15,49 @@
 //     push to new list
 //join new list
 
-function spinWords(string){
-    collect = []
-    string = string.split(' ')
-    console.log(string)
-    for (let i = 0; i < string.length; i++){
-        // console.log(string)
-        if (string[i].length >= 5){
-            let rev_string = string[i].split('').reverse();
-            collect.push(rev_string.join(''));
-        }
-        else{
-            collect.push(string[i])
-        }
-    }
-    return collect.join(' ');
-  }
+// function spinWords(string){
+//     collect = []
+//     string = string.split(' ')
+//     console.log(string)
+//     for (let i = 0; i < string.length; i++){
+//         // console.log(string)
+//         if (string[i].length >= 5){
+//             let rev_string = string[i].split('').reverse();
+//             collect.push(rev_string.join(''));
+//         }
+//         else{
+//             collect.push(string[i])
+//         }
+//     }
+//     return collect.join(' ');
+//   }
 
-  console.log(spinWords("Hey fellow warriors"))
+// console.log(spinWords("Hey fellow warriors"))
+
+// function spinWords(string){
+//     collect = []
+//     string = string.split(' ')
+//     string.map(w => {
+//         if (w.length >= 5){
+//             let rev_string = w.split('').reverse();
+//             collect.push(rev_string.join(''));
+//         }
+//         else{
+//             collect.push(w);
+//         }
+//     })
+//     return collect.join(' ');
+//   }
+
+// console.log(spinWords("Hey fellow warriors"))
+
+function spinWords(string){
+
+    string = string.split(' ');
+    return string.map(w => w.length >= 5 ?
+                           w.split('').reverse().join('') :
+                           w)
+                      .join(' ');
+}
+
+console.log(spinWords("Hey fellow warriors"))
