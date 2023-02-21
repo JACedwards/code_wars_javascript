@@ -24,6 +24,10 @@ function moveZeros(arr) {
             output.push(false);
         }
 
+        else if (str_output[i] == 'null'){
+            output.push(null);
+        }
+
         else if ((/[a-zA-Z]/).test(str_output[i])){
             output.push(str_output[i])
         }
