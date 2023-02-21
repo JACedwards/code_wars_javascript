@@ -6,8 +6,30 @@
 // spinWords( "This is a test") => returns "This is a test" 
 // spinWords( "This is another test" )=> returns "This is rehtona test"
 
-
+//Psuedo:
+// split
+// for loop
+//   check length
+//     if >= 5:
+//     reverse;
+//     push to new list
+//join new list
 
 function spinWords(string){
-    //TODO Have fun :)
+    collect = []
+    string = string.split(' ')
+    console.log(string)
+    for (let i = 0; i < string.length; i++){
+        // console.log(string)
+        if (string[i].length >= 5){
+            let rev_string = string[i].split('').reverse();
+            collect.push(rev_string.join(''));
+        }
+        else{
+            collect.push(string[i])
+        }
+    }
+    return collect.join(' ');
   }
+
+  console.log(spinWords("Hey fellow warriors"))
