@@ -7,7 +7,7 @@
 // Empty list is considered to have zero greatest sum. Note that the empty list or array is also a valid sublist/subarray.
 
 
-var maxSequence = function(arr){
+function maxSequence(arr){
     let tempSum = 0
     let maxSum = 0
     for (let l = 0; l < arr.length; l++){
@@ -20,12 +20,11 @@ var maxSequence = function(arr){
             if (tempSum > maxSum) {
                 maxSum = tempSum;
             }
-        
         }
         tempSum = 0
     }
     return maxSum
   }
 
-
 console.log(maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
+// answer = 6; [4, -1, 2, 1]
