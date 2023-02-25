@@ -23,9 +23,8 @@ function solution(str, ending){
     return regex.test(str)
   }
 
-console.log(solution('abc','bc'))
+console.log(solution('abc','d'))
 
-//using variables in regex:  https://www.webtips.dev/webtips/javascript/javascript-create-regex-from-string-variable 
 
 
 
