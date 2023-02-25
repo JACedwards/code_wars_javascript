@@ -32,7 +32,7 @@ function openOrSenior(data){
     output= []
 
     return data.map(e => e[0] >= 55 && e[1] > 7? "Senior" : "Open")
-    return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+    // return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
 
     
   }
