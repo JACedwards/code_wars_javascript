@@ -20,14 +20,35 @@
 
 // console.log(disemvowel("This website is for losers LOL!"))
 
-function disemvowel(str) {
-    let vowel = 'aeiou'
+// function disemvowel(str) {
+//     let vowel = 'aeiou'
 
-    str.split('').forEach(e => vowel.includes(e.toLowerCase()) ? 
-    str = `${str.slice(0,str.indexOf(e))}${str.slice(str.indexOf(e)+1)}` : 
-    str = str)
+//     str.split('').forEach(e => vowel.includes(e.toLowerCase()) ? 
+//     str = `${str.slice(0,str.indexOf(e))}${str.slice(str.indexOf(e)+1)}` : 
+//     str = str)
     
-    return str
-  }
+//     return str
+//   }
+
+// console.log(disemvowel("This website is for losers LOL!"))
+
+// function disemvowel(str) {
+//   let vowels = ['a','e','i','o','u']
+//   str = str.split('');
+//   let noVowels = [];
+//   for (let i = 0; i < str.length; i++) {
+//     if (vowels.indexOf(str[i]) == -1) {
+//       noVowels.push(str[i]);
+//     }
+//   }
+//   return noVowels.join('');
+// }
+
+// console.log(disemvowel("This website is for losers LOL!"))
+
+function disemvowel(str) {
+ 
+  return str.replace(/[aeiou]/gi, '')
+}
 
 console.log(disemvowel("This website is for losers LOL!"))

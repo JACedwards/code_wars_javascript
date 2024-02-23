@@ -2,6 +2,8 @@
 
 // For example, for [1, 2, 2] it should return 9 because 
 
+
+
 function squareSum(numbers){
     sum = 0
     for (i = 0; i < numbers.length; i++){
